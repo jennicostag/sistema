@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="styles_login.css">
+    <script src="reg.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Registre-se</h2>
+        <form id="reg">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password1">Senha:</label>
+            <input type="password" id="password1" name="password1" required>
+
+            <label for="password2">Confirme a senha:</label>
+            <input type="password" id="password2" name="password2" required>
+
+            <label for="chave1">Sua chave secreta:</label>
+            <input type="password" id="chave1" name="chave1" required>
+
+            <label for="chave2">Confirme sua chave secreta:</label>
+            <input type="password" id="chave2" name="chave2" required>
+
+            <hr>
+
+            <label for="tel">Telefone:</label>
+            <input type="tel" id="tel" name="tel" maxlength="15" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cidade">Selecione Cidade:</label>
+            <select name="cidade" id="cidade">
+                <option value="selecione">Selecione uma cidade...</option>
+            </select>
+
+            <label for="estado">Selecione Estado:</label>
+            <select name="estado" id="estado">
+                <option value="selecione">Selecione um estado...</option>
+            </select>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" maxlength="8" required>
+
+            <hr>
+
+            <label for="sobre">Sobre mim:</label>
+            <input type="text" id="sobre" name="sobre" required>
+
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade" required>
+
+            <label for="profissao">Profissão:</label>
+            <input type="text" id="profissao" name="profissao" required>
+
+            <label for="cpf">Seu CPF:</label>
+            <input type="text" id="cpf" name="cpf" maxlength="11" required>
+
+            <button type="button" id="btn_reg">Registrar</button>
+        </form>
+        <p class="texto"><a href="index.html" class="link">Já tenho uma conta</a></p>
+        <p class="mensagem"></p>
+    </div>
+</body>
+</html>

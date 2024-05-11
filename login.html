@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de Acesso</title>
+    <link rel="stylesheet" href="styles_login.css">
+    <script src="login.js" defer></script>
+</head>
+ 
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="chave">Sua chave pessoal:</label>
+            <input type="password" id="chave" name="chave" required>
+
+            <button type="button" id="btn_login">Entrar</button>
+        </form>
+        <p class="texto"><a href="reg.html" class="link">Registrar-se</a></p>
+        <p class="mensagem"></p>
+    </div>
+</body>
+
+</html>

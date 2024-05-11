@@ -1,0 +1,43 @@
+<button onclick="funcao()">TESTE</button>
+
+<button id="botao2">TESTE 2</button>
+
+<form action="">
+    <label for="tel">Email:</label>
+    <input type="tel" id="tel" name="tel" >
+
+    <button type="submit">ENVIAR</button>
+</form>
+
+<script>
+    function funcao(){
+        alert("Olá, mundo")
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        let botao2 = document.querySelector("#botao2")
+
+        botao2.addEventListener("click", function(){
+            alert("Olá, mundo de novo")
+        })
+    })
+
+    document.getElementById('tel').addEventListener('input', function(event){
+    let input = event.target
+    let tel = input.value
+
+    //Remover todos os caracteres não numéricos
+    tel = tel.replace(/\D/g, '')
+
+    //verifica se o CEP possui a quantidade correta de caracteres
+    if (tel.length == 11){
+        //Formatar o CEP com a máscara de entrada 21984052447
+        tel = '(' + tel.substring(0, 2) + ')' + ' ' + tel.substring(2, 7) + '-' + tel.substring(7)
+        //substring é um método que retorna com uma parte de uma string
+        //1º parâmetro é o índice
+        //2º parâmetro é o índice limite
+    }
+
+    input.value = tel
+})
+</script>
