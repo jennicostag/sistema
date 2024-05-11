@@ -156,3 +156,33 @@ function popularSelectEstados(){
 
 popularSelectEstados()
 //FIM
+
+//INICIO SELECT CIDADES
+function popularSelectCidades(idEstado){
+    const selectCidades = document.getElementById("cidades")
+    selectCidades.innerHTML = ''
+
+    const optionSelecione = document.createElement("option")
+    optionSelecione.value = ''
+    optionSelecione.textContent = "Selecione uma cidade..."
+    selectCidades.appendChild(optionSelecione)
+
+    fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados/${idEstado}/municipios")
+    .then(response => {
+        if(!response.ok){
+            throw new Error("Erro ao buscar cidade")
+        }
+        return response.json()
+    })
+    .then(cidades => {
+        cidades.forEach(cidade => {
+            const option = document.createElement("option")
+            option.value = cidade.id
+            option.textContent = cidade.nome
+            selectCidades.appendChild(option)
+        })
+    })
+    .catch(error => {
+        alert(error.message)
+    })
+}
